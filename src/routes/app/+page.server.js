@@ -8,6 +8,4 @@ export async function load({ request, url }) {
     if (!referer || !referer.includes(url.origin)) {
         throw error(404, 'Not Found');
     }
-
-    return;
 }

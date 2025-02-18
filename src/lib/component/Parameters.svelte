@@ -1,13 +1,21 @@
 <script>
     import { Plus, Trash2 } from 'lucide-svelte';
 
-    export let parameters;
-    export let addParameter;
-    export let removeParameter;
+    export let request;
+
+    function addParameter() {
+        request.parameters = [...request.parameters, { key: '', value: '' }];
+    }
+
+    function removeParameter(id) {
+        request.parameters = request.parameters.filter(
+            (_, index) => index !== id,
+        );
+    }
 </script>
 
 <div class="flex flex-col mb-3">
-    {#if !parameters.length}
+    {#if !request.parameters.length}
         <div class="flex gap-1">
             <button
                 class="btn btn-sm btn-outline btn-neutral"
@@ -18,8 +26,11 @@
             </button>
         </div>
     {/if}
-    {#each parameters as item, i}
-        <div class="flex flex-col gap-1 {parameters.length - 1 > i && 'mb-3'}">
+    {#each request.parameters as item, i}
+        <div
+            class="flex flex-col gap-1 {request.parameters.length - 1 > i &&
+                'mb-3'}"
+        >
             <input
                 type="text"
                 class="input"
@@ -33,7 +44,7 @@
                 bind:value={item.value}
             />
             <div class="flex items-center gap-1">
-                {#if parameters.length - 1 === i}
+                {#if request.parameters.length - 1 === i}
                     <button
                         class="btn btn-sm btn-outline btn-neutral"
                         title="Add new parameter"

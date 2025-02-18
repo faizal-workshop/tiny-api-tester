@@ -1,13 +1,19 @@
 <script>
     import { Plus, Trash2 } from 'lucide-svelte';
 
-    export let headers;
-    export let addHeader;
-    export let removeHeader;
+    export let request;
+
+    function addHeader() {
+        request.headers = [...request.headers, { key: '', value: '' }];
+    }
+
+    function removeHeader(id) {
+        request.headers = request.headers.filter((_, index) => index !== id);
+    }
 </script>
 
 <div class="flex flex-col mb-3">
-    {#if !headers.length}
+    {#if !request.headers.length}
         <div class="flex gap-1">
             <button
                 class="btn btn-sm btn-outline btn-neutral"
@@ -18,8 +24,11 @@
             </button>
         </div>
     {/if}
-    {#each headers as item, i}
-        <div class="flex flex-col gap-1 {headers.length - 1 > i && 'mb-3'}">
+    {#each request.headers as item, i}
+        <div
+            class="flex flex-col gap-1 {request.headers.length - 1 > i &&
+                'mb-3'}"
+        >
             <input
                 type="text"
                 class="input"
@@ -33,7 +42,7 @@
                 bind:value={item.value}
             />
             <div class="flex items-center gap-1">
-                {#if headers.length - 1 === i}
+                {#if request.headers.length - 1 === i}
                     <button
                         class="btn btn-sm btn-outline btn-neutral"
                         title="Add new header"
