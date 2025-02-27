@@ -5,7 +5,7 @@
 
 API tester to be used in simple web service development
 
-![image](https://github.com/user-attachments/assets/eed41537-9f31-47cb-b9b0-645a03e9ec36)
+![image](https://github.com/user-attachments/assets/ce819beb-f0b3-4ae4-b084-553811d83020)
 
 ## Features
 - Send HTTP request with desired method, parameters, headers, and body
