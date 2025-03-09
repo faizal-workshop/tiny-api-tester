@@ -1,6 +1,6 @@
 import { writable } from 'svelte/store';
 
-export const screen = writable({
+export default writable({
     page: 0,
     requestTab: 0,
     responseTab: 0,

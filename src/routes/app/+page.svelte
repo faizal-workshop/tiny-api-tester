@@ -3,7 +3,7 @@
     import axios from 'axios';
     import { toast } from 'svoast';
 
-    import { screen } from '$lib/component/stores/screen';
+    import screen from '$lib/component/stores/screen';
     import PageTabs from '$lib/component/PageTabs.svelte';
     import RequestUrl from '$lib/component/RequestUrl.svelte';
     import RequestTabs from '$lib/component/RequestTabs.svelte';

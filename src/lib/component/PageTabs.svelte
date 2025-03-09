@@ -1,5 +1,5 @@
 <script>
-    import { screen } from '$lib/component/stores/screen';
+    import screen from '$lib/component/stores/screen';
 </script>
 
 <div role="tablist" class="tabs tabs-lift mb-3">
