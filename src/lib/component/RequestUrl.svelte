@@ -20,7 +20,7 @@
         on:keydown={handleKeydown}
     />
     <div class="flex items-center gap-1">
-        <select class="select" bind:value={request.verb}>
+        <select class="select appearance-none" bind:value={request.verb}>
             <option value="get">GET</option>
             <option value="post">POST</option>
             <option value="patch">PATCH</option>
