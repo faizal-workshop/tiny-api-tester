@@ -1,7 +1,8 @@
 <script>
     import '../app.css';
     import { page } from '$app/stores';
-    import { Toasts } from 'svoast';
+
+    let { children } = $props();
 </script>
 
 <svelte:head>
@@ -10,5 +11,4 @@
     </title>
 </svelte:head>
 
-<slot />
-<Toasts position={'bottom-center'} />
+{@render children()}

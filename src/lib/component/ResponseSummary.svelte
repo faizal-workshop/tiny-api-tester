@@ -34,7 +34,7 @@
 
 <div class="flex flex-col gap-1 mb-3 text-sm">
     <div class="flex items-center gap-1">
-        <span class="w-[40px]">Code</span>
+        <span class="w-10">Code</span>
         <span>:</span>
         <span class="flex-1 {responseColor}">
             {#if !response.code}
@@ -54,14 +54,14 @@
         </span>
     </div>
     <div class="flex items-center gap-1">
-        <span class="w-[40px]">Time</span>
+        <span class="w-10">Time</span>
         <span>:</span>
         <span class="flex-1">
             {response.time || '-'}
         </span>
     </div>
     <div class="flex items-center gap-1">
-        <span class="w-[40px]">Size</span>
+        <span class="w-10">Size</span>
         <span>:</span>
         <span class="flex-1">
             {response.size || '-'}

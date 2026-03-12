@@ -1,7 +1,6 @@
 <script>
     import { page } from '$app/stores';
     import axios from 'axios';
-    import { toast } from 'svoast';
 
     import screen from '$lib/component/stores/screen';
     import PageTabs from '$lib/component/PageTabs.svelte';
