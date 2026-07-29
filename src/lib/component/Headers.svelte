@@ -1,5 +1,5 @@
 <script>
-    import { Plus, Trash2 } from 'lucide-svelte';
+    import { Plus, Trash2 } from '@lucide/svelte';
 
     export let request;
 
